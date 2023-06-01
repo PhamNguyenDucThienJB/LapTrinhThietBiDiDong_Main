@@ -9,7 +9,7 @@
         android:id="@+id/imHienThiMonAn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/size150dp"
-        android:background="@drawable/backgroundheader1"
+        android:background="@drawable/background_add"
         android:scaleType="centerCrop"
         tools:ignore="ContentDescription" />
 

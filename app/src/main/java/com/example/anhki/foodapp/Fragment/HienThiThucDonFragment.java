@@ -94,7 +94,7 @@ public class HienThiThucDonFragment extends Fragment{
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         if (maquyen == 0){
             MenuItem itThemThucDon = menu.add(1, R.id.itThemThucDon, 1, R.string.themthucdon);
-            itThemThucDon.setIcon(R.drawable.logodangnhap);
+            itThemThucDon.setIcon(R.drawable.addicon);
             itThemThucDon.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         }
     }

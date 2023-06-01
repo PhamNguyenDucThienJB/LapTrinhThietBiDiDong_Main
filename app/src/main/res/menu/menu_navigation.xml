@@ -13,7 +13,7 @@
         <item
             android:id="@+id/itThucDon"
             android:title="@string/thucdon"
-            android:icon="@drawable/logodangnhap" />
+            android:icon="@drawable/background" />
 
         <item
             android:title="@string/nhanvien"

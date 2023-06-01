@@ -20,6 +20,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.anhki.foodapp.CustomAdapter.AdapterHienThiDanhSachMonAn;
+import com.example.anhki.foodapp.CustomAdapter.AdapterHienThiNhanVien;
 import com.example.anhki.foodapp.entity.MonAnDAO;
 import com.example.anhki.foodapp.Detail.MonAnDTO;
 import com.example.anhki.foodapp.R;
@@ -62,12 +63,21 @@ public class HienThiDanhSachMonAnFragment extends Fragment{
 //                reloadFragment(); // Tải lại trang
                 return true;
             case R.id.details:
-//                 Xem chi tiết món ăn được chọn
-//                 Thêm code xử lý xem chi tiết món ăn ở đây
-                return true;
+////                 Xem chi tiết món ăn được chọn
+////                 Thêm code xử lý xem chi tiết món ăn ở đây
+//                return true;
+
             default:
                 return super.onContextItemSelected(item);
         }
+    }
+    private void HienThiDanhSachNhanVien(){
+//        monAnDTOList = monAnDAO.LayDanhSachMonAnTheoLoai();
+//
+//        adapterHienThiDanhSachMonAn = new AdapterHienThiDanhSachMonAn(getActivity(), R.layout.custom_layout_hienthidanhsachmonan, monAnDTOList);
+//        gridView.setAdapter(adapterHienThiDanhSachMonAn);
+//        adapterHienThiDanhSachMonAn.notifyDataSetChanged();
+
     }
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_hienthithucdon, container, false);
