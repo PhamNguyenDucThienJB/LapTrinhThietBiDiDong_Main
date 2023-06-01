@@ -4,14 +4,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundtransparentGray">
+    android:background="@drawable/background_add">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="THÊM THỰC ĐƠN"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="227dp"
+        android:layout_height="58dp"
+        android:text="THÊM MÓN ĂN"
         android:layout_gravity="center"
-        android:textSize="@dimen/size18sp"
+        android:textSize="30sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#FF0057"
         android:textStyle="bold"
         android:layout_margin="@dimen/size10dp"/>
 
@@ -77,7 +81,7 @@
             android:id="@+id/imHinhThucDon"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size250dp"
-            android:src="@drawable/backgroundheader1"
+            android:src="@drawable/addicon"
             android:layout_weight="1"
             tools:ignore="ContentDescription" />
 
@@ -90,8 +94,8 @@
 
         <Button
             android:id="@+id/btnDongYThemMonAn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="20dp"
+            android:layout_height="55dp"
             android:text="@string/dongy"
             android:layout_weight="1"
             android:layout_margin="@dimen/size10dp"
@@ -99,15 +103,15 @@
             android:background="@color/colorPrimary"
             tools:ignore="ButtonStyle" />
 
-        <Button
-            android:id="@+id/btnThoatThemMonAn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/thoat"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/size10dp"
-            android:padding="@dimen/size10dp"
-            android:background="@color/colorRed"
-            tools:ignore="ButtonStyle" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnThoatThemMonAn"
+        android:layout_width="187dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="10dp"
+        android:text="Thoát"
+        tools:ignore="MissingConstraints,TextSizeCheck"/>
 </LinearLayout>

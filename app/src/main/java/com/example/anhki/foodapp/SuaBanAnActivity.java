@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.anhki.foodapp.DAO.BanAnDAO;
+import com.example.anhki.foodapp.entity.BanAnDAO;
 
 public class SuaBanAnActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnDongYSua;

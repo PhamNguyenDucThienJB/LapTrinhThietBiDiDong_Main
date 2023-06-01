@@ -1,4 +1,4 @@
-package com.example.anhki.foodapp.DAO;
+package com.example.anhki.foodapp.entity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -6,18 +6,31 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.anhki.foodapp.DTO.MonAnDTO;
+import com.example.anhki.foodapp.Detail.MonAnDTO;
 import com.example.anhki.foodapp.Database.CreateDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MonAnDAO {
-    private final SQLiteDatabase database;
+    private static SQLiteDatabase database;
 
     public MonAnDAO(Context context){
         CreateDatabase createDatabase = new CreateDatabase(context);
         database = createDatabase.open();
+    }
+    @SuppressLint("Recycle")
+    public static List<MonAnDTO> getData(){
+        List<MonAnDTO> res = new ArrayList<>();
+        String sql= "SELECT * FROM MONAN";
+        Cursor cursor =database.rawQuery(sql,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            MonAnDTO food = new MonAnDTO();
+            res.add(food);
+            cursor.moveToNext();
+        }
+        return res;
     }
 
     public boolean ThemMonAn(MonAnDTO monAnDTO){
@@ -52,4 +65,24 @@ public class MonAnDAO {
 
         return monAnDTOs;
     }
+    public static MonAnDTO findFoodById(int id) {
+        MonAnDTO food = new MonAnDTO();
+        String sql = "SELECT * FROM MONAN WHERE MAMON = '" + id + "'";
+        Cursor cursor = database.rawQuery(sql, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            food.setId(cursor.getInt(0));
+            food.setTenMonAn(cursor.getString(1));
+            food.setGiaTien(String.valueOf(cursor.getInt(2)));
+            food.setGiaTien(cursor.getString(3));
+            cursor.moveToNext();
+        }
+
+        return food;
+    }
+    public static void remove_food(int id) {
+        database.delete("TB_MONAN", "MAMON = '" + id + "'", null);
+    }
+
 }

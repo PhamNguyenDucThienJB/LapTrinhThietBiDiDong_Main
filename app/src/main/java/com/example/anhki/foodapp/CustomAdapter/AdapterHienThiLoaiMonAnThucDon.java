@@ -9,8 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.anhki.foodapp.DAO.LoaiMonAnDAO;
-import com.example.anhki.foodapp.DTO.LoaiMonAnDTO;
+import com.example.anhki.foodapp.entity.LoaiMonAnDAO;
+import com.example.anhki.foodapp.Detail.LoaiMonAnDTO;
 import com.example.anhki.foodapp.R;
 
 import java.util.List;

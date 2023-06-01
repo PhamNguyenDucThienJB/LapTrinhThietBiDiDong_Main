@@ -1,15 +1,14 @@
-package com.example.anhki.foodapp.DAO;
+package com.example.anhki.foodapp.entity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.TextView;
 
-import com.example.anhki.foodapp.DTO.ChiTietGoiMonDTO;
-import com.example.anhki.foodapp.DTO.GoiMonDTO;
-import com.example.anhki.foodapp.DTO.ThanhToanDTO;
+import com.example.anhki.foodapp.Detail.ChiTietGoiMonDTO;
+import com.example.anhki.foodapp.Detail.GoiMonDTO;
+import com.example.anhki.foodapp.Detail.ThanhToanDTO;
 import com.example.anhki.foodapp.Database.CreateDatabase;
 
 import java.util.ArrayList;

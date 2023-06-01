@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.anhki.foodapp.DAO.NhanVienDAO;
+import com.example.anhki.foodapp.entity.NhanVienDAO;
 
 public class DangNhapActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText edTenDangNhap, edMatKhau;

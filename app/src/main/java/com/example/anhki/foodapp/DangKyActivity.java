@@ -17,10 +17,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.anhki.foodapp.DAO.NhanVienDAO;
-import com.example.anhki.foodapp.DAO.QuyenDAO;
-import com.example.anhki.foodapp.DTO.NhanVienDTO;
-import com.example.anhki.foodapp.DTO.QuyenDTO;
+import com.example.anhki.foodapp.entity.NhanVienDAO;
+import com.example.anhki.foodapp.entity.QuyenDAO;
+import com.example.anhki.foodapp.Detail.NhanVienDTO;
+import com.example.anhki.foodapp.Detail.QuyenDTO;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

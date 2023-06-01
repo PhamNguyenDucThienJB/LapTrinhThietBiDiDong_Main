@@ -1,10 +1,11 @@
-package com.example.anhki.foodapp.DTO;
+package com.example.anhki.foodapp.Detail;
 
 public class GoiMonDTO {
     private int MaGoiMon;
     private int MaBan;
     private int MaNhanVien;
-    private String TinhTrang, NgayGoi;
+    private String TinhTrang;
+    private String NgayGoi;
 
     public int getMaBan() {
         return MaBan;

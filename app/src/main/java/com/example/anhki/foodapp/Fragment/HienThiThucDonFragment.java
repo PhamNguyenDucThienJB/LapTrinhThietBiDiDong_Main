@@ -10,18 +10,19 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 
 import com.example.anhki.foodapp.CustomAdapter.AdapterHienThiLoaiMonAnThucDon;
-import com.example.anhki.foodapp.DAO.LoaiMonAnDAO;
-import com.example.anhki.foodapp.DTO.LoaiMonAnDTO;
+import com.example.anhki.foodapp.entity.LoaiMonAnDAO;
+import com.example.anhki.foodapp.Detail.LoaiMonAnDTO;
 import com.example.anhki.foodapp.R;
 import com.example.anhki.foodapp.ThemThucDonActivity;
 import com.example.anhki.foodapp.TrangChuActicity;
@@ -30,6 +31,7 @@ import java.util.List;
 
 public class HienThiThucDonFragment extends Fragment{
     private GridView gridView;
+    ListView listView,listView2;
     private List<LoaiMonAnDTO> loaiMonAnDTOs;
     private LoaiMonAnDAO loaiMonAnDAO;
     private FragmentManager fragmentManager;
@@ -48,7 +50,8 @@ public class HienThiThucDonFragment extends Fragment{
         gridView = view.findViewById(R.id.gvHienThiThucDon);
 
         fragmentManager = getActivity().getSupportFragmentManager();
-
+//        listView = view.findViewById(R.id.gvHienThiThucDon);
+//        registerForContextMenu(listView);
         loaiMonAnDAO = new LoaiMonAnDAO(getActivity());
         loaiMonAnDTOs = loaiMonAnDAO.LayDanhSachLoaiMonAn();
 
@@ -80,6 +83,11 @@ public class HienThiThucDonFragment extends Fragment{
         });
 
         return view;
+    }
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getActivity().getMenuInflater();
+        inflater.inflate(R.menu.context_menu, menu);
     }
 
     @Override

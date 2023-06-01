@@ -1,4 +1,4 @@
-package com.example.anhki.foodapp.DTO;
+package com.example.anhki.foodapp.Detail;
 
 public class QuyenDTO {
     private int MaQuyen;

@@ -15,10 +15,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.anhki.foodapp.CustomAdapter.AdapterHienThiLoaiMonAn;
-import com.example.anhki.foodapp.DAO.LoaiMonAnDAO;
-import com.example.anhki.foodapp.DAO.MonAnDAO;
-import com.example.anhki.foodapp.DTO.LoaiMonAnDTO;
-import com.example.anhki.foodapp.DTO.MonAnDTO;
+import com.example.anhki.foodapp.entity.LoaiMonAnDAO;
+import com.example.anhki.foodapp.entity.MonAnDAO;
+import com.example.anhki.foodapp.Detail.LoaiMonAnDTO;
+import com.example.anhki.foodapp.Detail.MonAnDTO;
 
 import java.util.List;
 

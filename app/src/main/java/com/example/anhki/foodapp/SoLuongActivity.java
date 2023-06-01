@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.anhki.foodapp.DAO.GoiMonDAO;
-import com.example.anhki.foodapp.DTO.ChiTietGoiMonDTO;
+import com.example.anhki.foodapp.entity.GoiMonDAO;
+import com.example.anhki.foodapp.Detail.ChiTietGoiMonDTO;
 
 public class SoLuongActivity extends AppCompatActivity implements View.OnClickListener{
     int maban, mamonan;

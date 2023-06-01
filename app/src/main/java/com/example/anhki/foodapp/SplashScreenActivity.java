@@ -8,9 +8,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.anhki.foodapp.DAO.NhanVienDAO;
-import com.example.anhki.foodapp.DAO.QuyenDAO;
-import com.example.anhki.foodapp.DTO.NhanVienDTO;
+import com.example.anhki.foodapp.entity.NhanVienDAO;
+import com.example.anhki.foodapp.entity.QuyenDAO;
+import com.example.anhki.foodapp.Detail.NhanVienDTO;
 import com.example.anhki.foodapp.Database.CreateDatabase;
 
 public class SplashScreenActivity extends AppCompatActivity {

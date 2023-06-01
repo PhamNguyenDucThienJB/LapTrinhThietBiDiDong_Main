@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.anhki.foodapp.DAO.BanAnDAO;
+import com.example.anhki.foodapp.entity.BanAnDAO;
 
 public class ThemBanAnActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText edTenThemBanAn;

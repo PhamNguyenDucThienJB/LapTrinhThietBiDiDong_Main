@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -17,20 +18,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.anhki.foodapp.DAO.BanAnDAO;
-import com.example.anhki.foodapp.DAO.GoiMonDAO;
-import com.example.anhki.foodapp.DAO.LoaiMonAnDAO;
-import com.example.anhki.foodapp.DTO.BanAnDTO;
-import com.example.anhki.foodapp.DTO.GoiMonDTO;
-import com.example.anhki.foodapp.DTO.LoaiMonAnDTO;
-import com.example.anhki.foodapp.DTO.ThanhToanDTO;
+import com.example.anhki.foodapp.entity.BanAnDAO;
+import com.example.anhki.foodapp.entity.GoiMonDAO;
+import com.example.anhki.foodapp.entity.LoaiMonAnDAO;
+import com.example.anhki.foodapp.Detail.BanAnDTO;
+import com.example.anhki.foodapp.Detail.GoiMonDTO;
+import com.example.anhki.foodapp.Detail.LoaiMonAnDTO;
+import com.example.anhki.foodapp.Detail.ThanhToanDTO;
 import com.example.anhki.foodapp.Fragment.HienThiThucDonFragment;
 import com.example.anhki.foodapp.R;
 import com.example.anhki.foodapp.ThanhToanActivity;
 import com.example.anhki.foodapp.TrangChuActicity;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -199,9 +199,9 @@ public class AdapterHienThiBanAn extends BaseAdapter implements View.OnClickList
 
         String kttinhtrang = banAnDAO.LayTinhTrangBan(banAnDTO.getMaBan());
         if (kttinhtrang.equals("true"))
-            viewHolderBanAn.imBanAn.setImageResource(R.drawable.banantrue);
-        else
             viewHolderBanAn.imBanAn.setImageResource(R.drawable.banan);
+        else
+            viewHolderBanAn.imBanAn.setImageResource(R.drawable.banan1);
 
         viewHolderBanAn.txtTenBanAn.setText(banAnDTO.getTenBan());
         viewHolderBanAn.imBanAn.setTag(position);
@@ -213,4 +213,29 @@ public class AdapterHienThiBanAn extends BaseAdapter implements View.OnClickList
 
         return view;
     }
+//    @SuppressLint({"NonConstantResourceId", "SimpleDateFormat"})
+
+//    public boolean onLongClick(@NonNull View v) {
+//        int id = v.getId();
+//        int maban = (int) v.getTag();
+//        ;
+//        viewHolderBanAn = (ViewHolderBanAn) ((View) v.getParent()).getTag();
+//        switch (id) {
+//            case R.id.image:
+//
+//                FragmentTransaction tran = fragmentManager.beginTransaction();
+//                ThanhToanActivity thanhToanActivity = new ThanhToanActivity();
+//                Bundle bData = new Bundle();
+//                bData.putInt("tableId", maban);
+//
+//                thanhToanActivity.setArguments(bData);
+//                tran.replace(R.id.content, thanhToanActivity).addToBackStack("Hiển thị ds đặt món");
+//                tran.commit();
+//
+//
+//                break;
+//        }
+//            return true;
+//        }
+
 }

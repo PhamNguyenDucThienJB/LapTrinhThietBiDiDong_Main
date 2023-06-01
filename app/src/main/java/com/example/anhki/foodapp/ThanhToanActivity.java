@@ -12,9 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.anhki.foodapp.CustomAdapter.AdapterHienThiThanhToan;
-import com.example.anhki.foodapp.DAO.BanAnDAO;
-import com.example.anhki.foodapp.DAO.GoiMonDAO;
-import com.example.anhki.foodapp.DTO.ThanhToanDTO;
+import com.example.anhki.foodapp.entity.BanAnDAO;
+import com.example.anhki.foodapp.entity.GoiMonDAO;
+import com.example.anhki.foodapp.Detail.ThanhToanDTO;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class ThanhToanActivity extends AppCompatActivity implements View.OnClick
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_thanhtoan);
-
+//        Bundle bundle = getArguments();
         gridView = findViewById(R.id.gvThanhToan);
         btnThanhToan = findViewById(R.id.btnThanhToan);
         btnThoat = findViewById(R.id.btnThoatThanhToan);

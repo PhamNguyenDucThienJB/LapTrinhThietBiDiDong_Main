@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.anhki.foodapp.DTO.NhanVienDTO;
+import com.example.anhki.foodapp.Detail.NhanVienDTO;
 import com.example.anhki.foodapp.R;
 
 import java.util.List;

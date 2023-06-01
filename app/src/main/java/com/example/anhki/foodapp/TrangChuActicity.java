@@ -38,6 +38,7 @@ public class TrangChuActicity extends AppCompatActivity implements NavigationVie
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_trangchu);
 

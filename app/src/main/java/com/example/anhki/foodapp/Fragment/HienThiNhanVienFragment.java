@@ -19,8 +19,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.anhki.foodapp.CustomAdapter.AdapterHienThiNhanVien;
-import com.example.anhki.foodapp.DAO.NhanVienDAO;
-import com.example.anhki.foodapp.DTO.NhanVienDTO;
+import com.example.anhki.foodapp.entity.NhanVienDAO;
+import com.example.anhki.foodapp.Detail.NhanVienDTO;
 import com.example.anhki.foodapp.DangKyActivity;
 import com.example.anhki.foodapp.R;
 

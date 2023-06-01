@@ -1,4 +1,4 @@
-package com.example.anhki.foodapp.DAO;
+package com.example.anhki.foodapp.entity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.anhki.foodapp.DTO.NhanVienDTO;
+import com.example.anhki.foodapp.Detail.NhanVienDTO;
 import com.example.anhki.foodapp.Database.CreateDatabase;
 
 import java.util.ArrayList;
@@ -87,6 +87,7 @@ public class NhanVienDAO {
         long kiemtra = database.delete(CreateDatabase.TB_NHANVIEN, CreateDatabase.TB_NHANVIEN_MANV + " = " + manhanvien, null);
         return kiemtra != 0;
     }
+
 
     @SuppressLint({"Recycle", "Range"})
     public int LayQuyenNhanVien(int manv){

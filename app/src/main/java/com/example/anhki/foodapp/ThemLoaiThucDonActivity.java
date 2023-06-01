@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.anhki.foodapp.DAO.LoaiMonAnDAO;
+import com.example.anhki.foodapp.entity.LoaiMonAnDAO;
 
 public class ThemLoaiThucDonActivity extends AppCompatActivity implements View.OnClickListener{
     private Button btnDongYThemLoaiThucDon;

@@ -1,4 +1,4 @@
-package com.example.anhki.foodapp.DAO;
+package com.example.anhki.foodapp.entity;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.anhki.foodapp.DTO.QuyenDTO;
+import com.example.anhki.foodapp.Detail.QuyenDTO;
 import com.example.anhki.foodapp.Database.CreateDatabase;
 
 import java.util.ArrayList;

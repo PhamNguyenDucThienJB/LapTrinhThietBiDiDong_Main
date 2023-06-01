@@ -1,8 +1,19 @@
-package com.example.anhki.foodapp.DTO;
+package com.example.anhki.foodapp.Detail;
 
 public class MonAnDTO {
+    private int id;
     private int MaMonAn, MaLoai;
     private String TenMonAn, GiaTien, HinhAnh;;
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getHinhAnh() {
         return HinhAnh;

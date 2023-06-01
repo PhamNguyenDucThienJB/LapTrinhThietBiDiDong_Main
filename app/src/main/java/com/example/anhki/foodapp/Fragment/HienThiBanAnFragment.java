@@ -22,8 +22,8 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.example.anhki.foodapp.CustomAdapter.AdapterHienThiBanAn;
-import com.example.anhki.foodapp.DAO.BanAnDAO;
-import com.example.anhki.foodapp.DTO.BanAnDTO;
+import com.example.anhki.foodapp.entity.BanAnDAO;
+import com.example.anhki.foodapp.Detail.BanAnDTO;
 import com.example.anhki.foodapp.R;
 import com.example.anhki.foodapp.SuaBanAnActivity;
 import com.example.anhki.foodapp.ThemBanAnActivity;
@@ -76,7 +76,7 @@ public class HienThiBanAnFragment extends Fragment {
         AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         int vitri = menuInfo.position;
         int maban = banAnDTOList.get(vitri).getMaBan();
-
+//        if (maquyen == 0){
         switch (id){
             case R.id.itSua:
                 Intent intent = new Intent(getActivity(), SuaBanAnActivity.class);
@@ -101,7 +101,7 @@ public class HienThiBanAnFragment extends Fragment {
         if (maquyen == 0){
             //là quản lý
             MenuItem itThemBanAn = menu.add(1, R.id.itThemBanAn, 1, R.string.thembanan);
-            itThemBanAn.setIcon(R.drawable.thembanan);
+            itThemBanAn.setIcon(R.drawable.banan);
             itThemBanAn.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         }
     }

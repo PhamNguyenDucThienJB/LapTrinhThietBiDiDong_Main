@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.anhki.foodapp.DTO.ThanhToanDTO;
+import com.example.anhki.foodapp.Detail.ThanhToanDTO;
 import com.example.anhki.foodapp.R;
 
 import java.util.List;

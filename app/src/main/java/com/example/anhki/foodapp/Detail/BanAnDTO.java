@@ -1,4 +1,4 @@
-package com.example.anhki.foodapp.DTO;
+package com.example.anhki.foodapp.Detail;
 
 public class BanAnDTO {
     private int MaBan;
