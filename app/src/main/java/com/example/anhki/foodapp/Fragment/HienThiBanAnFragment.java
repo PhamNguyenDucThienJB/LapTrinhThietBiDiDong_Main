@@ -76,32 +76,32 @@ public class HienThiBanAnFragment extends Fragment {
         AdapterView.AdapterContextMenuInfo menuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         int vitri = menuInfo.position;
         int maban = banAnDTOList.get(vitri).getMaBan();
-//        if (maquyen == 0){
-        switch (id){
-            case R.id.itSua:
-                Intent intent = new Intent(getActivity(), SuaBanAnActivity.class);
-                intent.putExtra("maban", maban);
-                startActivityForResult(intent, RESQUEST_CODE_SUA);
-                break;
-            case R.id.itXoa:
-                boolean kiemtra = banAnDAO.XoaBanAn(maban);
-                if (kiemtra){
-                    Toast.makeText(getActivity(),getActivity().getResources().getString(R.string.xoathanhcong), Toast.LENGTH_SHORT).show();
-                    HienThiDanhSachBanAn();
-                }else
-                    Toast.makeText(getActivity(),getActivity().getResources().getString(R.string.loi) + maban, Toast.LENGTH_SHORT).show();
-                break;
-        }
-        return super.onContextItemSelected(item);
+//        if (maquyen == 0) {
+            switch (id) {
+                case R.id.itSua:
+                    Intent intent = new Intent(getActivity(), SuaBanAnActivity.class);
+                    intent.putExtra("maban", maban);
+                    startActivityForResult(intent, RESQUEST_CODE_SUA);
+                    break;
+                case R.id.itXoa:
+                    boolean kiemtra = banAnDAO.XoaBanAn(maban);
+                    if (kiemtra) {
+                        Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.xoathanhcong), Toast.LENGTH_SHORT).show();
+                        HienThiDanhSachBanAn();
+                    } else
+                        Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.loi) + maban, Toast.LENGTH_SHORT).show();
+                    break;
+            }
+            return super.onContextItemSelected(item);
+//        }
     }
-
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         if (maquyen == 0){
             //là quản lý
             MenuItem itThemBanAn = menu.add(1, R.id.itThemBanAn, 1, R.string.thembanan);
-            itThemBanAn.setIcon(R.drawable.banan);
+            itThemBanAn.setIcon(R.drawable.addicon);
             itThemBanAn.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
         }
     }
